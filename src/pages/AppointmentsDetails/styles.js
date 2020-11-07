@@ -1,9 +1,7 @@
+import { Dimensions } from "react-native";
 import styled from "styled-components/native";
 import { colors, typography } from "./../../settings/default";
-
-export const Container = styled.View`
-  align-items: center;
-`;
+export const Container = styled.View``;
 
 export const Clickable = styled.TouchableOpacity`
   justify-content: center;
@@ -48,7 +46,7 @@ export const Avatar = styled.Image`
 `;
 
 export const Line = styled.View`
-  width: 200;
+  width: ${Dimensions.get("window").width - 40};
   background-color: "rgb(225, 145, 124)";
   height: 5;
   border-radius: 20px;
