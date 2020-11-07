@@ -105,8 +105,10 @@ export const Button = styled.View`
 `;
 
 export const Input = styled.TextInput`
-  border-bottom-width: 1px;
-  border-color: white;
   font-size: 20px;
-  color: white;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 15px 15px 15px 15px;
+  margin-top: 10px;
 `;

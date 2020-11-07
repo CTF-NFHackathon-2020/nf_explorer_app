@@ -71,17 +71,17 @@ export default function Awards({ navigation }) {
         >
           <S.View>
             <S.Input
-              placeholder="Digite seu e-mail"
+              placeholder="E-mail"
               autoCapitalize={false}
               autoCompleteType={false}
               autoCorrect={false}
-              placeholderTextColor="white"
+              placeholderTextColor="black"
             />
           </S.View>
           <S.View>
             <S.Input
-              placeholder="Digite sua senha"
-              placeholderTextColor="white"
+              placeholder="Password"
+              placeholderTextColor="black"
               autoCapitalize={false}
               autoCompleteType={false}
               autoCorrect={false}
@@ -92,7 +92,7 @@ export default function Awards({ navigation }) {
             <S.Clickable onPress={() => navigation.navigate("Main")}>
               <LinearGradient
                 // Background Linear Gradient
-                colors={["#FF0604", "#FF7A02"]}
+                colors={["black", "black"]}
                 style={{
                   position: "absolute",
                   left: 0,
@@ -113,7 +113,7 @@ export default function Awards({ navigation }) {
                     alignSelf: "center",
                   }}
                 >
-                  Entrar
+                  Login
                 </S.Title>
               </S.Button>
             </S.Clickable>

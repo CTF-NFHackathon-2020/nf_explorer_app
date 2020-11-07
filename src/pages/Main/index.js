@@ -28,6 +28,7 @@ export default function Main({ navigation }) {
               <S.Title>Share</S.Title>
             </S.Clickable>
             <S.Clickable
+              onPress={() => navigation.navigate("Menu")}
               style={{
                 backgroundColor: "rgb(225, 145, 124)",
                 width: 80,
