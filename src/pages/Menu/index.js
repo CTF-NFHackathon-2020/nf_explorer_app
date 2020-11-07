@@ -1,48 +1,28 @@
 import React from "react";
 import { Dimensions, SafeAreaView } from "react-native";
 import * as S from "./styles";
-import { colors, typography } from "./../../settings/default";
-import { artists } from "../../mock";
-import { LinearGradient } from "expo-linear-gradient";
-import { useEffect } from "react";
 import { FontAwesome, Entypo } from "@expo/vector-icons";
 
 export default function Main({ navigation }) {
-  function renderSpecificPercentage(index, total) {
-    if (index == 0) return "-3%";
-    if (index == total) return "100%";
-    return "50%";
-  }
-
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "rgb(246, 250, 255)" }}>
-      <S.Scrollable contentContainerStyle={{}}>
-        <S.Container style={{ padding: 10 }}>
-          <S.Row>
-            <S.Clickable>
-              <FontAwesome name="history" size={40} />
-              <S.Title>History</S.Title>
-            </S.Clickable>
-            <S.Clickable>
-              <FontAwesome name="share" size={40} />
-              <S.Title>Share</S.Title>
-            </S.Clickable>
-            <S.Clickable
-              style={{
-                backgroundColor: "rgb(225, 145, 124)",
-                width: 80,
-                height: 80,
-                borderRadius: 40,
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <FontAwesome name="plus" size={40} />
-            </S.Clickable>
-          </S.Row>
-        </S.Container>
-
-        <S.Line />
+      <S.Scrollable contentContainerStyle={{ marginTop: 40 }}>
+        <S.Clickable
+          style={{
+            backgroundColor: "rgb(225, 145, 124)",
+            width: 60,
+            height: 60,
+            borderRadius: 40,
+            justifyContent: "center",
+            alignItems: "center",
+            position: "absolute",
+            right: 10,
+            zIndex: 1,
+            top: -40,
+          }}
+        >
+          <FontAwesome name="plus" size={25} />
+        </S.Clickable>
 
         <S.MinimumContainer
           style={{
@@ -52,41 +32,43 @@ export default function Main({ navigation }) {
             paddingVertical: 40,
             marginHorizontal: 20,
             alignSelf: "center",
-            width: Dimensions.get("window").width - 40,
+            width: Dimensions.get("window").width - 60,
             borderRadius: 20,
           }}
         >
-          {[1, 2, 3].map((el, index) => (
-            <S.MinimumContainer
-              style={{
-                backgroundColor: "rgb(227, 227, 227)",
-                flexGrow: 1,
-                paddingHorizontal: 20,
-                borderLeftWidth: 3,
-                borderLeftColor: "rgb(225, 145, 124)",
-                paddingBottom: index == 2 ? 0 : 50,
-              }}
-            >
-              <FontAwesome
-                name="circle"
+          {["Medication", "Appointment", "Genetics", "Note", "Image Scan"].map(
+            (el, index) => (
+              <S.Clickable
+                onPress={() => navigation.navigate("Medication")}
                 style={{
-                  position: "absolute",
-                  left: -9,
-                  top: renderSpecificPercentage(index, 2),
+                  justifyContent: "flex-start",
+                  alignItems: "flex-start",
                 }}
-                color={"rgb(225, 145, 124)"}
-                size={20}
-              />
+              >
+                <S.MinimumContainer
+                  style={{
+                    backgroundColor: "rgb(227, 227, 227)",
+                    flexGrow: 1,
+                    paddingHorizontal: 20,
+                    paddingVertical: 30,
+                    justifyContent: "center",
+                  }}
+                >
+                  <FontAwesome
+                    name="circle"
+                    style={{
+                      position: "absolute",
+                      left: 0,
+                    }}
+                    color={"rgb(225, 145, 124)"}
+                    size={20}
+                  />
 
-              <S.SubTitle style={{ fontWeight: "500" }}>
-                Oct 20, 2020
-              </S.SubTitle>
-              <S.SubTitle style={{ fontWeight: "bold" }}>
-                NF1 Annual Checkup
-              </S.SubTitle>
-              <S.SubTitle>New York, NY</S.SubTitle>
-            </S.MinimumContainer>
-          ))}
+                  <S.SubTitle style={{ fontWeight: "500" }}>{el}</S.SubTitle>
+                </S.MinimumContainer>
+              </S.Clickable>
+            )
+          )}
         </S.MinimumContainer>
       </S.Scrollable>
     </SafeAreaView>
