@@ -35,7 +35,7 @@ export default function Awards({ navigation }) {
   return (
     <LinearGradient
       // Background Linear Gradient
-      colors={["#BD026A", "black"]}
+      colors={["rgb(59,67,80)", "rgb(225,145,124)"]}
       style={{
         position: "absolute",
         left: 0,
@@ -57,8 +57,7 @@ export default function Awards({ navigation }) {
             paddingVertical: 50,
           }}
         >
-          <S.Title>WOW</S.Title>
-          <S.SubTitle>RANK</S.SubTitle>
+          <S.Title>myNF</S.Title>
         </S.View>
 
         <S.View

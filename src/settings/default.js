@@ -3,6 +3,7 @@ const colors = {
   white: "white",
   orange: "#FFA001",
   secondary: "#4F1234",
+  black: "black",
 };
 
 const typography = {
