@@ -77,14 +77,21 @@ export default function Main({ navigation }) {
                 color={"rgb(225, 145, 124)"}
                 size={20}
               />
-
-              <S.SubTitle style={{ fontWeight: "500" }}>
-                Oct 20, 2020
-              </S.SubTitle>
-              <S.SubTitle style={{ fontWeight: "bold" }}>
-                NF1 Annual Checkup
-              </S.SubTitle>
-              <S.SubTitle>New York, NY</S.SubTitle>
+              <S.Clickable
+                onPress={() => navigation.navigate("AppointmentsDetails")}
+                style={{
+                  justifyContent: "flex-start",
+                  alignItems: "flex-start",
+                }}
+              >
+                <S.SubTitle style={{ fontWeight: "500" }}>
+                  Oct 20, 2020
+                </S.SubTitle>
+                <S.SubTitle style={{ fontWeight: "bold" }}>
+                  NF1 Annual Checkup
+                </S.SubTitle>
+                <S.SubTitle>New York, NY</S.SubTitle>
+              </S.Clickable>
             </S.MinimumContainer>
           ))}
         </S.MinimumContainer>

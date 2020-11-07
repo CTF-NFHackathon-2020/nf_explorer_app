@@ -4,12 +4,10 @@ import { LogBox } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import PerfilScreen from "./pages/Perfil";
+import MenuScreen from "./pages/Menu";
 import MainScreen from "./pages/Main";
-import ArtistScreen from "./pages/Artist";
-import AwardsScreen from "./pages/Awards";
-import AwardScreen from "./pages/Award";
-import GoalScreen from "./pages/Goal";
+import AppointmentsDetailsScreen from "./pages/AppointmentsDetails";
+import MedicationScreen from "./pages/Medication";
 import LoginScreen from "./pages/Login";
 
 import { useFonts } from "expo-font";
@@ -32,11 +30,12 @@ function App() {
       >
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Main" component={MainScreen} />
-        <Stack.Screen name="Artist" component={ArtistScreen} />
-        <Stack.Screen name="Awards" component={AwardsScreen} />
-        <Stack.Screen name="Perfil" component={PerfilScreen} />
-        <Stack.Screen name="Goal" component={GoalScreen} />
-        <Stack.Screen name="Award" component={AwardScreen} />
+        <Stack.Screen
+          name="AppointmentsDetails"
+          component={AppointmentsDetailsScreen}
+        />
+        <Stack.Screen name="Medication" component={MedicationScreen} />
+        <Stack.Screen name="Menu" component={MenuScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
