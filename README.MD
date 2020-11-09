@@ -1,6 +1,6 @@
 # Start
 
-Sony Code Stage
+NF Explorer App
 
 ## :rocket: Tech
 
@@ -9,17 +9,17 @@ Sony Code Stage
 - [Expo](https://expo.io/)
 - [axios](https://github.com/axios/axios)
 
-## :boom: Como rodar ?
+## :boom: How to run ?
 
 - ### **Pré-requisitos**
 
-  - É **necessário** possuir o **[Node.js](https://nodejs.org/en/)** instalado no computador
-  - É **necessário** possuir o **[Git](https://git-scm.com/)** instalado e configurado no computador
-  - Também, é **preciso** ter um gerenciador de pacotes seja o **[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**.
+  - You **need** to have **[Node.js](https://nodejs.org/en/)**.
+  - You **need** to have **[Git](https://git-scm.com/)** installed and configured on your computer.
+  - Also it is **needed** to have a package manager like **[NPM](https://www.npmjs.com/)** or **[Yarn](https://yarnpkg.com/)**.
 
-## Instalação
+## Installation
 
-Use o gerenciador de pacotes [yarn](https://yarnpkg.com/) para instalar o app.
+Use the [yarn](https://yarnpkg.com/) package manager to install all dependencies.
 
 ```bash
 yarn install
