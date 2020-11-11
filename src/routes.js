@@ -14,7 +14,7 @@ import { useFonts } from "expo-font";
 
 const Stack = createStackNavigator();
 
-LogBox.ignoreAllLogs();
+// LogBox.ignoreAllLogs();
 
 function App() {
   const [loaded] = useFonts({
