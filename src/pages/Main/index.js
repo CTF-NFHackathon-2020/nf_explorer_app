@@ -27,18 +27,24 @@ export default function Main({ navigation }) {
               <FontAwesome name="share" size={40} />
               <S.Title>Share</S.Title>
             </S.Clickable>
+            <S.Clickable>
+              <S.CustomIcon
+                source={require("./../../images/medications.png")}
+              />
+              <S.Title>Medications</S.Title>
+            </S.Clickable>
             <S.Clickable
               onPress={() => navigation.navigate("Menu")}
               style={{
                 backgroundColor: "rgb(225, 145, 124)",
-                width: 80,
-                height: 80,
+                width: 60,
+                height: 60,
                 borderRadius: 40,
                 justifyContent: "center",
                 alignItems: "center",
               }}
             >
-              <FontAwesome name="plus" size={40} />
+              <FontAwesome name="plus" size={25} />
             </S.Clickable>
           </S.Row>
         </S.Container>

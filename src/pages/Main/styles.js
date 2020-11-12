@@ -10,6 +10,11 @@ export const Clickable = styled.TouchableOpacity`
   align-items: center;
 `;
 
+export const CustomIcon = styled.Image`
+  width: 40px;
+  height: 40px;
+`;
+
 export const UserTitle = styled.Text`
   font-size: 18px;
   font-style: normal;
@@ -64,7 +69,7 @@ export const Icon = styled.Image`
 export const Scrollable = styled.ScrollView``;
 
 export const Title = styled.Text`
-  font-size: ${typography.h1};
+  font-size: ${typography.h2};
   color: ${colors.black};
 `;
 
