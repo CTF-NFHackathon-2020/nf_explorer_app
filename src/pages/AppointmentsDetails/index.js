@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Dimensions, SafeAreaView } from "react-native";
 import * as S from "./styles";
-import { FontAwesome, Entypo } from "@expo/vector-icons";
 
-export default function Main({ navigation }) {
-  function renderSpecificPercentage(index, total) {
-    if (index == 0) return "-3%";
-    if (index == total) return "100%";
-    return "50%";
-  }
+export default function Main({ navigation, route }) {
+  const [attachment, setAttachment] = useState({});
+
+  useEffect(() => {
+    setAttachment(route.params.attachment);
+  }, []);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "rgb(255, 255, 255)" }}>
@@ -20,11 +19,13 @@ export default function Main({ navigation }) {
               paddingHorizontal: 20,
             }}
           >
-            <S.SubTitle style={{ fontWeight: "500" }}>Oct 20, 2020</S.SubTitle>
-            <S.SubTitle style={{ fontWeight: "bold" }}>
-              NF1 Annual Checkup
+            <S.SubTitle style={{ fontWeight: "500" }}>
+              {attachment.date}
             </S.SubTitle>
-            <S.SubTitle>New York, NY</S.SubTitle>
+            <S.SubTitle style={{ fontWeight: "bold" }}>
+              {attachment.title}
+            </S.SubTitle>
+            <S.SubTitle>{attachment.location}</S.SubTitle>
           </S.MinimumContainer>
         </S.Container>
 
@@ -45,19 +46,16 @@ export default function Main({ navigation }) {
             <S.SubTitle style={{ fontWeight: "500" }}>Notes:</S.SubTitle>
 
             <S.SubTitle>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              suscipit interdum dui, ac accumsan ligula vehicula non. Curabitur
-              dignissim pellentesque libero, sit amet posuere felis accumsan sit
-              amet. Nam tortor mi, volutpat a magna sed, congue feugiat ipsum.
-              Suspendisse nec leo volutpat, pharetra tortor nec, dignissim
-              augue. Sed feugiat erat ac ligula porta consequat. Phasellus
-              ultricies dui neque, ac commodo ex sagittis cursus. Suspendisse
-              placerat placerat tortor id ullamcorper. Duis quis dolor pharetra,
-              volutpat nulla efficitur, egestas mi.
+              {attachment.description?.replaceAll("•", "\n")}
             </S.SubTitle>
           </S.Container>
           <S.Container style={{ marginTop: 20 }}>
             <S.SubTitle style={{ fontWeight: "500" }}>Attachments:</S.SubTitle>
+            <S.RowList horizontal style={{ marginTop: 10 }}>
+              {attachment.attachments?.map((image) => (
+                <S.Image source={image.source} />
+              ))}
+            </S.RowList>
           </S.Container>
         </S.MinimumContainer>
       </S.Scrollable>

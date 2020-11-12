@@ -8,6 +8,13 @@ export const Clickable = styled.TouchableOpacity`
   align-items: center;
 `;
 
+export const Image = styled.Image`
+  height: 100px;
+  width: 100px;
+  margin-right: 15px;
+  border-radius: 20px;
+`;
+
 export const UserTitle = styled.Text`
   font-size: 18px;
   font-style: normal;
