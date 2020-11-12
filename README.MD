@@ -6,7 +6,6 @@ NF Explorer App
 
 - [Javascript](https://www.javascript.com/)
 - [React Native](https://reactnative.dev/)
-- [Expo](https://expo.io/)
 - [axios](https://github.com/axios/axios)
 
 ## :boom: How to run ?
@@ -22,11 +21,28 @@ NF Explorer App
 Use the [yarn](https://yarnpkg.com/) package manager to install all dependencies.
 
 ```bash
+# On your default directory, to install that gem because it's used on ios pods.
+gem install cocoapods
+
+# Update your current pod repository
+pod repo update
+
+# Install and link the iOS dependencies with the project
+npx pod-install
+
+# Link some dependencies and fonts with the react native project.
+react-native link
+
+# Install package.json dependencies on node_modules folder
 yarn install
 ```
 
 ## Usage
 
 ```bash
+# Start the node server
 yarn start
+
+# Run on iOS/Android Simulator or on your device
+yarn ios/android
 ```
