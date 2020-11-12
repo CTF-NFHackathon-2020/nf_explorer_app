@@ -1,3 +1,21 @@
+export const medications = [
+  {
+    title: "Prednisome",
+    description: "Oral Tablet, 40 mg",
+    frequency: "1x Daily",
+  },
+  {
+    title: "Carbamazepine",
+    description: "Oral Tablet, 200 mg",
+    frequency: "2x Weekly",
+  },
+  {
+    title: "Gabapentin",
+    description: "Oral Tablet, 100 mg",
+    frequency: "1x Daily",
+  },
+];
+
 export const appointments = [
   {
     date: "Oct 20, 2020",

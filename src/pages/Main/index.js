@@ -24,7 +24,7 @@ export default function Main({ navigation }) {
               <FontAwesome name="share" size={40} />
               <S.Title>Share</S.Title>
             </S.Clickable>
-            <S.Clickable>
+            <S.Clickable onPress={() => navigation.navigate("Medications")}>
               <S.CustomIcon
                 source={require("./../../images/medications.png")}
               />

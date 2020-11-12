@@ -6,6 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import MenuScreen from "./pages/Menu";
 import MainScreen from "./pages/Main";
+import MedicationsScreen from "./pages/Medications";
 import AppointmentsDetailsScreen from "./pages/AppointmentsDetails";
 import MedicationScreen from "./pages/Medication";
 import LoginScreen from "./pages/Login";
@@ -14,7 +15,7 @@ import { useFonts } from "expo-font";
 
 const Stack = createStackNavigator();
 
-// LogBox.ignoreAllLogs();
+LogBox.ignoreAllLogs();
 
 function App() {
   const [loaded] = useFonts({
@@ -29,6 +30,7 @@ function App() {
         initialRouteName="Login"
       >
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Medications" component={MedicationsScreen} />
         <Stack.Screen name="Main" component={MainScreen} />
         <Stack.Screen
           name="AppointmentsDetails"
