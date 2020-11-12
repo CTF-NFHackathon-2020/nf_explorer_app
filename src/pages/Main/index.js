@@ -1,11 +1,8 @@
 import React from "react";
 import { Dimensions, SafeAreaView } from "react-native";
 import * as S from "./styles";
-import { colors, typography } from "./../../settings/default";
-import { artists } from "../../mock";
-import { LinearGradient } from "expo-linear-gradient";
-import { useEffect } from "react";
-import { FontAwesome, Entypo } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
+import { appointments } from "../../mock";
 
 export default function Main({ navigation }) {
   function renderSpecificPercentage(index, total) {
@@ -63,44 +60,54 @@ export default function Main({ navigation }) {
             borderRadius: 20,
           }}
         >
-          {[1, 2, 3].map((el, index) => (
-            <S.MinimumContainer
-              style={{
-                backgroundColor: "rgb(227, 227, 227)",
-                flexGrow: 1,
-                paddingHorizontal: 20,
-                borderLeftWidth: 3,
-                borderLeftColor: "rgb(225, 145, 124)",
-                paddingBottom: index == 2 ? 0 : 50,
-              }}
-            >
-              <FontAwesome
-                name="circle"
+          {appointments.map(
+            ({ date, title, location, description, attachments }, index) => (
+              <S.MinimumContainer
                 style={{
-                  position: "absolute",
-                  left: -9,
-                  top: renderSpecificPercentage(index, 2),
-                }}
-                color={"rgb(225, 145, 124)"}
-                size={20}
-              />
-              <S.Clickable
-                onPress={() => navigation.navigate("AppointmentsDetails")}
-                style={{
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
+                  backgroundColor: "rgb(227, 227, 227)",
+                  flexGrow: 1,
+                  paddingHorizontal: 20,
+                  borderLeftWidth: 3,
+                  borderLeftColor: "rgb(225, 145, 124)",
+                  paddingBottom: index == 2 ? 0 : 50,
                 }}
               >
-                <S.SubTitle style={{ fontWeight: "500" }}>
-                  Oct 20, 2020
-                </S.SubTitle>
-                <S.SubTitle style={{ fontWeight: "bold" }}>
-                  NF1 Annual Checkup
-                </S.SubTitle>
-                <S.SubTitle>New York, NY</S.SubTitle>
-              </S.Clickable>
-            </S.MinimumContainer>
-          ))}
+                <FontAwesome
+                  name="circle"
+                  style={{
+                    position: "absolute",
+                    left: -9,
+                    top: renderSpecificPercentage(index, 2),
+                  }}
+                  color={"rgb(225, 145, 124)"}
+                  size={20}
+                />
+                <S.Clickable
+                  onPress={() =>
+                    navigation.navigate("AppointmentsDetails", {
+                      attachment: {
+                        date,
+                        title,
+                        location,
+                        description,
+                        attachments,
+                      },
+                    })
+                  }
+                  style={{
+                    justifyContent: "flex-start",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <S.SubTitle style={{ fontWeight: "500" }}>{date}</S.SubTitle>
+                  <S.SubTitle style={{ fontWeight: "bold" }}>
+                    {title}
+                  </S.SubTitle>
+                  <S.SubTitle>{location}</S.SubTitle>
+                </S.Clickable>
+              </S.MinimumContainer>
+            )
+          )}
         </S.MinimumContainer>
       </S.Scrollable>
     </SafeAreaView>
