@@ -6,8 +6,8 @@ export const appointments = [
     description:
       "Performed hearing test, minor loss in left ear and tinnitus •No change in balance •Performed MRIs to check for tumors •Referral for NY Audiologists •Discussed bortezomib/temolizomide combo",
     attachments: [
-      { source: require("./../images/image_1.png") },
-      { source: require("./../images/image_2.png") },
+      { url: require("./../images/image_1.png") },
+      { url: require("./../images/image_2.png") },
     ],
   },
   {
@@ -17,8 +17,8 @@ export const appointments = [
     description:
       "Performed hearing test, minor loss in left ear and tinnitus •No change in balance •Performed MRIs to check for tumors •Referral for NY Audiologists •Discussed bortezomib/temolizomide combo",
     attachments: [
-      { source: require("./../images/image_1.png") },
-      { source: require("./../images/image_2.png") },
+      { url: require("./../images/image_1.png") },
+      { url: require("./../images/image_2.png") },
     ],
   },
   {
@@ -28,8 +28,8 @@ export const appointments = [
     description:
       "Performed hearing test, minor loss in left ear and tinnitus •No change in balance •Performed MRIs to check for tumors •Referral for NY Audiologists •Discussed bortezomib/temolizomide combo",
     attachments: [
-      { source: require("./../images/image_1.png") },
-      { source: require("./../images/image_2.png") },
+      { url: require("./../images/image_1.png") },
+      { url: require("./../images/image_2.png") },
     ],
   },
 ];
