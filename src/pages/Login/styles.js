@@ -10,7 +10,6 @@ export const Container = styled.View`
 export const Clickable = styled.TouchableOpacity``;
 
 export const Point = styled.Text`
-  font-family: Sen;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -32,7 +31,7 @@ export const Title = styled.Text`
   font-size: 20px;
   color: ${colors.white};
   font-weight: 700;
-  font-family: Sen;
+
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -53,7 +52,6 @@ export const Row = styled.View`
 `;
 
 export const Description = styled.Text`
-  font-family: Sen;
   font-size: 10px;
   font-style: normal;
   font-weight: 700;

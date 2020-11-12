@@ -9,7 +9,6 @@ export const Clickable = styled.TouchableOpacity`
 `;
 
 export const UserTitle = styled.Text`
-  font-family: Sen;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -20,7 +19,6 @@ export const UserTitle = styled.Text`
 `;
 
 export const Points = styled.Text`
-  font-family: Sen;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

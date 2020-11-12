@@ -38,6 +38,11 @@
     "jest": "~25.2.6",
     "react-test-renderer": "~16.13.1"
   },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
   "private": true,
   "name": "nf_explorer_app",
   "version": "1.0.0"

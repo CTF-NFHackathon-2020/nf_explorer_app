@@ -31,7 +31,6 @@ export const MinimumContainer = styled.View`
 export const Scrollable = styled.ScrollView``;
 
 export const Description = styled.Text`
-  font-family: Sen;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -42,13 +41,11 @@ export const Description = styled.Text`
 `;
 
 export const Title = styled.Text`
-  font-family: Sen;
   font-size: ${typography.h1};
   color: ${colors.white};
 `;
 
 export const SubTitle = styled.Text`
-  font-family: Sen;
   font-size: ${typography.h2};
   color: ${colors.white};
 `;
@@ -69,8 +66,6 @@ export const Card = styled.TouchableOpacity`
 `;
 
 export const UserTitle = styled.Text`
-  font-family: Sen;
-  font-family: Sen;
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
@@ -81,8 +76,6 @@ export const UserTitle = styled.Text`
 `;
 
 export const Favorite = styled.Text`
-  font-family: Sen;
-  font-family: Sen;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
