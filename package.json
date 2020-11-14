@@ -4,9 +4,11 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "react-native-init": "react-native init"
   },
   "dependencies": {
+    "react-native-cli": "2.0.1",
     "@expo/vector-icons": "^10.2.1",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/drawer": "^5.10.2",
