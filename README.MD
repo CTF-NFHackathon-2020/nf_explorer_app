@@ -10,7 +10,7 @@ NF Explorer App
 
 ## :boom: How to run ?
 
-- ### \*\*Prerequisites
+- ### Prerequisites
 
   - You **need** to have **[Node.js](https://nodejs.org/en/)**.
   - You **need** to have **[Git](https://git-scm.com/)** installed and configured on your computer.
