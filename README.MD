@@ -59,6 +59,8 @@ E.g.
     - /Users/myuser/Projects/Hackathon/nfhackathon/app/:/docker/path
 ```
 
+## Usage
+
 ```bash
   # Basically setup of docker
   docker-compose up
@@ -66,6 +68,7 @@ E.g.
   # Show all ids of your docker containers
   docker ps -a
 
+  # Install pod dependencies
   cd ios && pod install
 
   # Run the yarn install on the project folder using container
