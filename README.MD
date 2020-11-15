@@ -47,7 +47,7 @@ yarn start
 yarn ios/android
 ```
 
-## :happy: Using Docker
+## 🐳 Using Docker
 
 ### Verify if your docker-compose.yml its using your local project folder on volumes:
 
