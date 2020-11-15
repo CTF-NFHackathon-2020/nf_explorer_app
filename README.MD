@@ -10,7 +10,7 @@ NF Explorer App
 
 ## :boom: How to run ?
 
-- ### **Pré-requisitos**
+- ### \*\*Prerequisites
 
   - You **need** to have **[Node.js](https://nodejs.org/en/)**.
   - You **need** to have **[Git](https://git-scm.com/)** installed and configured on your computer.
@@ -45,4 +45,35 @@ yarn start
 
 # Run on iOS/Android Simulator or on your device
 yarn ios/android
+```
+
+## :happy: Using Docker
+
+### Verify if your docker-compose.yml its using your local project folder on volumes:
+
+E.g.
+
+```bash
+  volumes:
+    # Change the first parte before the :
+    - /Users/myuser/Projects/Hackathon/nfhackathon/app/:/docker/path
+```
+
+```bash
+  # Basically setup of docker
+  docker-compose up
+
+  # Show all ids of your docker containers
+  docker ps -a
+
+  cd ios && pod install
+
+  # Run the yarn install on the project folder using container
+  docker exec -it _YOUR_DOCKER_CONTAINER_ID_ bash -c "cd /docker/path && yarn install"
+
+  # Run the yarn start on the project folder using container
+  docker exec -it _YOUR_DOCKER_CONTAINER_ID_ bash -c "cd /docker/path && yarn start"
+
+  # Press i to run on iOS or a to run on Android
+  # You need iOS Simulator or android Emulator or some device plugin on your computer.
 ```
